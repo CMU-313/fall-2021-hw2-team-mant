@@ -129,6 +129,8 @@ INSTALLED_APPS = (
     'mayan.apps.sources',
     'mayan.apps.tags',
     'mayan.apps.web_links',
+    # CMU Dashboard
+    'mayan.apps.dashboard',
     # Placed after rest_api to allow template overriding
     'drf_yasg'
 )
