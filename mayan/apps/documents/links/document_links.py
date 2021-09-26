@@ -21,6 +21,11 @@ link_document_list = Link(
     icon=icon_document_list,
     text=_('All documents'), view='documents:document_list'
 )
+link_candidate_dashboard = Link(
+    icon=icon_document_list,
+    text=_('Candidates'), view='documents:candidates_dashboard'
+)
+
 link_document_recently_accessed_list = Link(
     icon=icon_document_recently_accessed_list, text=_('Recently accessed'),
     view='documents:document_recently_accessed_list'
