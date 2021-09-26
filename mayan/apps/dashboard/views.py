@@ -4,10 +4,12 @@ from django.utils.translation import ugettext_lazy as _
 
 from mayan.apps.views.generics import ( SingleObjectListView )
 
+from .models import Dashboard
 from .icons import icon_cabinet
 from .links import (
     link_dashboard
 )
+
 
 class DashboardListView(SingleObjectListView):
 
