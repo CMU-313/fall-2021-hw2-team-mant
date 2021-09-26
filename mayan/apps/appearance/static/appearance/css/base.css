@@ -418,27 +418,6 @@ a i {
     padding: 1px 5px 0px;
 }
 
-.btn-danger {
-  background-color: #901616 !important;
-  border-color: #000000 !important;
-}
-
-/* .btn.btn-danger.btn-xs {
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-} */
-/* #content-title {
-  color: #5cb85c !important;
-} */
-
-.dropdown-header {
-  color: #000000 !important;
-}
-
-a {
-  color: #000000
-}
-
 /*
  * Top navigation
  * Hide default border to remove 1px line.
