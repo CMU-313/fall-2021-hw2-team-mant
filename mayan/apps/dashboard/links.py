@@ -10,5 +10,5 @@ from .icons import ( icon_cabinet_create )
 # Dashboard links
 link_dashboard = Link(
     icon=icon_cabinet_create,
-    text=_('Dashboard'), url="/dashboard"
+    text=_('Dashboard'), url="/dashboard/dashboard"
 )

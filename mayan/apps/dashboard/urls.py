@@ -4,7 +4,7 @@ from .views import ( DashboardListView )
 urlpatterns_dashboard = [
     url(
         regex=r'^dashboard/$', name='dashboard',
-        view=DashboardListView.as_view(template_name = 'home.html')
+        view=DashboardListView.as_view()
         )
 ]
 
