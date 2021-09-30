@@ -6,6 +6,8 @@ from mayan.apps.navigation.classes import Link
 
 from .icons import ( icon_cabinet_create )
 
+def condition_cabinet_is_root(context):
+    return context['resolved_object'].is_root_node()
 
 # Dashboard links
 link_dashboard = Link(

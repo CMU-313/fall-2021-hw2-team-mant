@@ -22,4 +22,4 @@ class DashboardApp(MayanAppConfig):
 
     def ready(self):
         super().ready()
-        menu_main.bind_links(links=(link_dashboard,), position=99) 
+        menu_main.bind_links(links=(link_dashboard,), position=99)
