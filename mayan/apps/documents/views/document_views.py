@@ -67,6 +67,45 @@ class DocumentListView(SingleObjectListView):
         queryset = ModelQueryFields.get(model=Document).get_queryset()
         return self.get_document_queryset().filter(pk__in=queryset)
 
+class CandidatesDashboardView (SingleObjectListView):
+    object_permission = permission_document_view
+
+    def get_context_data(self, **kwargs):
+        try:
+            return super().get_context_data(**kwargs)
+        except Exception as exception:
+            messages.error(
+                message=_(
+                    'Error retrieving application list: %(exception)s.'
+                ) % {
+                    'exception': exception
+                }, request=self.request
+            )
+            self.object_list = Document.valid.none()
+            return super().get_context_data(**kwargs)
+
+    def get_document_queryset(self):
+        return Document.valid.all()
+
+    def get_extra_context(self):
+        return {
+            'hide_links': True,
+            'hide_object': True,
+            'list_as_items': True,
+            'no_results_icon': icon_document_list,
+            'no_results_text': _(
+                'This could mean that no candidate info has been uploaded or '
+                'that your user account has not been granted the view '
+                'permission for any candidate info.'
+            ),
+            'no_results_title': _('No Candidate Data'),
+            'title': _('Candidates Dashboard'),
+        }
+
+    def get_source_queryset(self):
+        queryset = ModelQueryFields.get(model=Document).get_queryset()
+        return self.get_document_queryset().filter(pk__in=queryset)
+
 
 class DocumentTypeChangeView(MultipleObjectFormActionView):
     form_class = DocumentTypeFilteredSelectForm
