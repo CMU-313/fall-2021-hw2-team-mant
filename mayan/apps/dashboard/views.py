@@ -4,4 +4,5 @@ from django.views import View
 class DashboardListView(View):
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse('Hello, World!')
+        html = "<html><body>THIS IS MY HTML CODE</body></html>"
+        return HttpResponse(html)
