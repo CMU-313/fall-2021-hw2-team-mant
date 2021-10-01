@@ -26,7 +26,10 @@
 
 [support]: https://img.shields.io/badge/Get_support-brightgreen
 [support-url]: https://www.mayan-edms.com/support/
-
+ <div>
+ <p> Our testing documentation is in the README file of mayan/apps/dashboard.
+ </p>
+ </div>
 <div align="center">
   <a href="http://www.mayan-edms.com">
     <img width="200" heigth="200" src="https://gitlab.com/mayan-edms/mayan-edms/raw/master/docs/_static/mayan_logo.png">
