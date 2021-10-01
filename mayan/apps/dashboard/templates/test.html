@@ -115,43 +115,13 @@
                         <th>Average Interview Score</th>
 
                     </tr>
+                    {% for reviewer in reviewer_data %}
                     <tr>
-                        <td>Nathan Zhu</td>
-                        <td>6.7</td>
-                        <td>7.4</td>
-                        <td>5.0</td>
+                        {% for col in reviewer %}
+                        <td>{{ col }}</td>
+                        {% endfor %}
                     </tr>
-                    <tr>
-                        <td>Shawn Noronha</td>
-                        <td>8.4</td>
-                        <td>3.5</td>
-                        <td>8.6</td>
-                    </tr>
-                    <tr>
-                        <td>Sebastian Andreu</td>
-                        <td>2.9</td>
-                        <td>9.5</td>
-                        <td>4.4</td>
-                    </tr>
-                    <tr>
-                        <td>Vishal Saikrishnan</td>
-                        <td>6.6</td>
-                        <td>3.7</td>
-                        <td>1.3</td>
-
-                    </tr>
-                    <tr>
-                        <td>Oscar Wilcox</td>
-                        <td>7.3</td>
-                        <td>7.1</td>
-                        <td>8.1</td>
-                    </tr>
-                    <tr>
-                        <td>Casper Wong</td>
-                        <td>4.6</td>
-                        <td>8.9</td>
-                        <td>3.5</td>
-                    </tr>
+                    {% endfor %}
                 
                 </table> 
         </div>
@@ -159,11 +129,20 @@
         <br/><br/>
         <button type="button" class="collapsible">Reviewer Statistics</button>
             <div class="content">
-                <br/>
-                <h5>Average Technical Score given: 6.08 </h5>
-                <h5>Average Essay Score given: 6.68 </h5>
-                <h5>Average interview Score given: 5.15 </h5>
+                <table style="width:100%">
+                    <tr>
+                        <th>Average Technical Score given</th> 
+                        <th>Average Essay Score given</th>
+                        <th>Average interview Score given</th>
+                    </tr>
 
+                    <tr>
+                        <td>{{ average_tech_score }}</td>
+                        <td>{{ average_essay_score }}</td>
+                        <td>{{ average_interview_score }}</td>
+                    </tr>
+                
+                </table> 
             </div>
     </div>
       
