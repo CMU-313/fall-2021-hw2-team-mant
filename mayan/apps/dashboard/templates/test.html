@@ -53,76 +53,14 @@
                             <th>Skills</th>
 
                         </tr>
+
+                        {% for person in candidate_data %}
                         <tr>
-                            <td>Teddy Liang</td>
-                            <td>2.93</td> 
-                            <td>320</td>
-                            <td>1</td>
-                            <td>Java, C++, Python</td>
+                            {% for col in person %}
+                            <td>{{ col }}</td>
+                            {% endfor %}
                         </tr>
-                        <tr>
-                            <td>Nicholas Clark</td>
-                            <td>3.87</td> 
-                            <td>280</td>
-                            <td>2.5</td>
-                            <td>Python</td>
-                        </tr>
-                        <tr>
-                            <td>Megna Kokkalera</td>
-                            <td>2.64</td> 
-                            <td>270</td>
-                            <td>3</td>
-                            <td>Python, SQL</td>
-                        </tr>
-                        <tr>
-                            <td>Anagha Srikumar</td>
-                            <td>0.66</td> 
-                            <td>700</td>
-                            <td>1</td>
-                            <td>Java, C, Ruby, Python</td>
-                        </tr>
-                        <tr>
-                            <td>Michael Hilton</td>
-                            <td>2.77</td> 
-                            <td>210</td>
-                            <td>2</td>
-                            <td>Java, C++, Python</td>
-                        </tr>
-                        <tr>
-                            <td>Rohan Padhye</td>
-                            <td>2.61</td> 
-                            <td>420</td>
-                            <td>3</td>
-                            <td>C, Ruby, Python</td>
-                        </tr>
-                        <tr>
-                            <td>Victor Huang</td>
-                            <td>3.84</td> 
-                            <td>260</td>
-                            <td>2.5</td>
-                            <td>C++, Java</td>
-                        </tr>
-                        <tr>
-                            <td>Bob Jones</td>
-                            <td>3.46</td> 
-                            <td>840</td>
-                            <td>2.5</td>
-                            <td>C++, Java, Python</td>
-                        </tr>
-                        <tr>
-                            <td>Dave Scott</td>
-                            <td>1.17</td> 
-                            <td>870</td>
-                            <td>3.5</td>
-                            <td>SQL</td>
-                        </tr>
-                        <tr>
-                            <td>John Smith</td>
-                            <td>1.98</td> 
-                            <td>720</td>
-                            <td>0</td>
-                            <td>C</td>
-                        </tr>
+                        {% endfor %}
                     
                     </table> 
             </div>
@@ -130,8 +68,37 @@
             <br/><br/>
             <button type="button" class="collapsible">Candidate Statistics</button>
                 <div class="content">
+                    <table style="width:100%">
+                        <tr>
+                            <th>Average GPA</th> 
+                            <th>Average GRE</th>
+                            <th>Average Years of Work Experience</th>
+                        </tr>
+
+                        <tr>
+                            <td>{{ average_gpa }}</td>
+                            <td>{{ average_gre }}</td>
+                            <td>{{ average_work_experience }}</td>
+                        </tr>
+                    
+                    </table> 
                     <br/>
-                    <h5>Average GPA among Candidates: 2.59</h5>
+                    <h4>Three Most Common Skills</h4>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Skill</th> 
+                            <th>Occurrences</th>
+                        </tr>
+
+                        {% for skill in most_common_skills %}
+                        <tr>
+                            {% for col in skill %}
+                            <td>{{ col }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    
+                    </table> 
                 </div>
 		</div>
     <br/><br/>
