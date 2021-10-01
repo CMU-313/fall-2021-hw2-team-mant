@@ -1,10 +1,163 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html lang="en"> 	
+<head> 
+    <!-- JAVASCRIPT AND CSS CODE ADAPTED FROM https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        table, th, td {
+            padding: 5px;
+        }
+        table {
+            border-spacing: 15px;
+        }
+    </style>
+
+    <title>Dashboard</title>
+</head>
+
 <body>
+    <h3>Candidate and Reviewers Dashboard</h3>
+    <button type="button" class="collapsible">Candidates</button>
+        <div class="content">
+            <br/><br/>
+            <button type="button" class="collapsible">Candidate Data</button>
+                <div class="content">
+                    <table style="width:100%">
+                        <tr>
+                            <th>Name</th>
+                            <th>GPA</th> 
+                            <th>GRE</th>
+                            <th>Years of Work Experience</th>
+                            <th>Skills</th>
 
-<h1>My First Heading</h1>
+                        </tr>
+                        <tr>
+                            <td>Teddy Liang</td>
+                            <td>2.93</td> 
+                            <td>320</td>
+                            <td>1</td>
+                            <td>Java, C++, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Nicholas Clark</td>
+                            <td>3.87</td> 
+                            <td>280</td>
+                            <td>2.5</td>
+                            <td>Python</td>
+                        </tr>
+                        <tr>
+                            <td>Megna Kokkalera</td>
+                            <td>2.64</td> 
+                            <td>270</td>
+                            <td>3</td>
+                            <td>Python, SQL</td>
+                        </tr>
+                        <tr>
+                            <td>Anagha Srikumar</td>
+                            <td>0.66</td> 
+                            <td>700</td>
+                            <td>1</td>
+                            <td>Java, C, Ruby, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Hilton</td>
+                            <td>2.77</td> 
+                            <td>210</td>
+                            <td>2</td>
+                            <td>Java, C++, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Rohan Padhye</td>
+                            <td>2.61</td> 
+                            <td>420</td>
+                            <td>3</td>
+                            <td>C, Ruby, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Victor Huang</td>
+                            <td>3.84</td> 
+                            <td>260</td>
+                            <td>2.5</td>
+                            <td>C++, Java</td>
+                        </tr>
+                        <tr>
+                            <td>Bob Jones</td>
+                            <td>3.46</td> 
+                            <td>840</td>
+                            <td>2.5</td>
+                            <td>C++, Java, Python</td>
+                        </tr>
+                        <tr>
+                            <td>Dave Scott</td>
+                            <td>1.17</td> 
+                            <td>870</td>
+                            <td>3.5</td>
+                            <td>SQL</td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>1.98</td> 
+                            <td>720</td>
+                            <td>0</td>
+                            <td>C</td>
+                        </tr>
+                    
+                    </table> 
+            </div>
 
-<p>My first paragraph.</p>
+            <br/><br/>
+            <button type="button" class="collapsible">Candidate Statistics</button>
+                <div class="content">
+                    <br/>
+                    <h5>Average GPA among Candidates: 2.59</h5>
+                </div>
+		</div>
+    <br/><br/>
+    <button type="button" class="collapsible">Reviewers</button>
+    <div class="content">
+        <p>Lorem ipsum...</p>
+    </div>
+      
+    <!-- JAVASCRIPT AND CSS CODE ADAPTED FROM https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+    <!-- DO NOT EDIT -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+            });
+        }
+        </script>
 
 </body>
 </html>
