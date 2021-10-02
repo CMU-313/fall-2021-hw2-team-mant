@@ -162,6 +162,7 @@ RUN set -a \
 && MAYAN_STATIC_ROOT=${PROJECT_INSTALL_DIR}static mayan-edms.py preparestatic --noinput
 
 COPY --chown=mayan:mayan requirements/testing-base.txt "${PROJECT_INSTALL_DIR}"
+#COPY --chown=mayan:mayan mayan/apps/dashboard/templates/studentgraph.png /opt/mayan-edms/media/
 
 ####
 # Final image - base_image + builder_image artifact (Mayan install directory).
